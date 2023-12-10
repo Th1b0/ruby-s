@@ -363,9 +363,21 @@ footer div ul li a {
 .fotos {
   text-align: center;
   background-color: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem !important;
 }
 
 .below {
   position: relative;
-  top: 350px !important;
+  top: 345px !important;
+}
+
+.gallerijBtn {
+  text-decoration: none;
+  padding-inline: 1.5rem;
+  padding-block: 0.5rem;
+  color: white;
+  background-color: #e6a3a3;
+  border-radius: 15px;
+  font-size: 1.25rem;
 }

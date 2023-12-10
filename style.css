@@ -1,0 +1,371 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f1f1f1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  padding: 0;
+  margin: 0;
+}
+
+.nv {
+  display: none;
+}
+
+nav ul {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Background with a little blur */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  backdrop-filter: blur(15px); /* Adjust the blur as needed */
+  z-index: 9999;
+  gap: 4rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #b8860b;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav i {
+  font-size: 2rem;
+  color: #b8860b;
+  text-shadow: 12px 12px 12px #000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-inline: 2rem;
+  padding-block: 1rem;
+}
+
+.container {
+  position: relative; /* Needed for stacking context */
+  z-index: 1; /* Ensure the container appears on top of the video */
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: hidden;
+}
+
+/* Additional styles for better visibility of content */
+.hero {
+  color: #fff;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  color: #b8860b;
+  text-shadow: 12px 12px 12px #000;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero h2 {
+  color: white;
+  text-shadow: 12px 12px 12px #000;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.floatingBtn {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%) rotate(90deg); /* Adjusted transform */
+}
+
+.img-slid {
+  width: 65vw;
+  height: auto;
+  border: 2px white solid;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  padding-bottom: 5vh !important;
+  margin-bottom: 2vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  font-size: 16px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 95%;
+  height: auto;
+  margin-block: 2rem;
+  text-align: center;
+  margin-inline: auto;
+}
+
+.swipe-container {
+  margin-inline: 20px;
+}
+
+.swiper-pagination-bullet {
+  background: rgba(255, 255, 255, 0.8) !important;
+  position: relative;
+  top: -55px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #e6a3a3 !important;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1; /* Ensure the video appears behind other elements */
+}
+
+#video-bg {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.fa-arrow-right {
+  font-size: 3rem;
+  color: #e6a3a3;
+  transform: rotate(90deg);
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.hero2 {
+  text-align: center;
+  padding-block: 1rem;
+  background-color: white;
+  border-block: 3px solid #b8860b;
+  width: 90vw;
+  margin-inline: auto;
+  box-shadow: 7px 7px #e6a3a3;
+}
+.hero2 h2 {
+  color: #e6a3a3;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+.hero2 p {
+  margin-inline: 10px;
+}
+
+.hero2 hr {
+  width: 90%;
+  color: #e6a3a3;
+  background-color: #e6a3a3;
+  border: solid 1px #e6a3a3;
+}
+
+.menu {
+  margin-top: 6rem;
+  background-image: url("./ijs1.jpg");
+  text-align: center;
+  padding-block: 1rem;
+  background-color: white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  width: 90vw;
+  margin-inline: auto;
+  box-shadow: -7px -7px #e6a3a3;
+}
+
+.menu a {
+  text-align: center;
+  color: #e6a3a3;
+  font-weight: bolder;
+  z-index: 99;
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.hero3 {
+  margin-top: 6rem;
+  text-align: center;
+  padding-block: 1rem;
+  background-color: white;
+  border-block: 3px solid #b8860b;
+  width: 90vw;
+  margin-inline: auto;
+  box-shadow: 7px 7px #e6a3a3;
+}
+.hero3 h2 {
+  color: #e6a3a3;
+  font-weight: bold;
+  font-size: 2rem;
+  margin-block: 1rem;
+}
+.hero3 p {
+  margin-inline: 10px;
+}
+
+.hero3 hr {
+  width: 50%;
+  color: #e6a3a3;
+  background-color: #e6a3a3;
+  border: solid 1px #e6a3a3;
+}
+
+.container2 {
+  background-color: #f1f1f1;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -111;
+  background-image: url("./368606562_859597688437298_6279626281493034162_n.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero,
+.hero2,
+.hero3,
+.menu {
+  position: relative; /* Needed for stacking context */
+  z-index: 1; /* Ensure the content appears on top of the background image */
+  width: 90vw;
+  margin-inline: auto;
+}
+
+.container2 {
+  padding-block: 6rem;
+}
+
+footer {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #232323;
+  color: white;
+  align-items: center;
+  justify-content: center;
+}
+footer div {
+  width: 90vw;
+  margin-inline: auto;
+}
+footer div ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  padding-left: 1rem;
+}
+footer div ul li {
+  list-style: none;
+  color: gray;
+  margin-top: 1rem;
+}
+
+footer div ul li:last-child {
+  list-style: none;
+  color: gray;
+  margin-bottom: 1rem;
+}
+footer div ul span {
+  list-style: none;
+  color: #b8860b;
+  font-size: 1.1rem;
+}
+
+footer div ul li a {
+  color: #b8860b;
+}
+
+.diensten {
+  padding-block: 4rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+}
+.diensten .card {
+  text-align: center;
+  color: white;
+  background-color: #b8860b;
+  width: 90vw;
+  padding-block: 1rem;
+  border: solid 3px white;
+}
+.diensten .card i {
+  font-size: 2rem;
+  margin-bottom: 0.8rem;
+}
+.copy {
+  text-align: center;
+  background-color: #e6a3a3;
+  width: 100vw;
+  padding-block: 0.5rem;
+  margin-top: 4rem;
+}
+.copy a {
+  color: white;
+}
+
+.fotos {
+  text-align: center;
+  background-color: white;
+}
+
+.below {
+  position: relative;
+  top: 350px !important;
+}
